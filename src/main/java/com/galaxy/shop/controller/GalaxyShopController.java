@@ -50,7 +50,7 @@ public class GalaxyShopController
      * @throws IOException - throws when file related exception occurs 
      */
     @PostMapping(value = "/process", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<GalaxyShopResponse<List<String>>> processGalaxyTransaction(MultipartFile multipartFile)
+    public ResponseEntity<GalaxyShopResponse<List<String>>> processGalaxyTransaction(@RequestBody MultipartFile multipartFile)
         throws IOException
     {
 

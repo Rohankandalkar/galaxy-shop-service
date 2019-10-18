@@ -33,12 +33,12 @@ public class GalaxyShopServiceImpl implements GalaxyShopService
 
 
     /**
-     * This is Service Implementation for Content Processing which further calls
-     * Resolution Service. Resolution Service decides which service would work AWS
-     * or FFmpeg.
+     * This is Service Implementation for transaction statement processing
+     * Its process statement and finally calculate credits according to
+     * currency
      * 
-     * @param MultipartFile
-     * @return GalaxyShopResponse<List<String>>
+     * @param MultipartFile - File which contains transaction statements
+     * @return GalaxyShopResponse<List<String>> - finally calculated credits according to currency
      * @throws IOException
      */
     @Override
@@ -54,8 +54,6 @@ public class GalaxyShopServiceImpl implements GalaxyShopService
         Map<String, String> galaxyCurrencyDetailsMap = calculateGalaxyCurrencyRomanNumerals(
                      transactionalStatementsDetails.stream().filter(p -> p.split(" ").length == 3).collect(Collectors.toList()));
         
-        log.debug("GalaxyShopServiceImpl : prepaired currency details into map ");
-
         log.debug("GalaxyShopServiceImpl : preparing galaxy metal values in map as key - Galaxy metal name and value - metal's value");
         
         Map<String, Integer> galaxyMetalValuesDetailsMap = calculateGalaxyMetalValues(

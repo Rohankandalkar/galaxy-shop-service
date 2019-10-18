@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Spring-boot-h2-service</artifactId>
+	<artifactId>galaxy-shop-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring-boot-h2-service</name>
+	<name>galaxy-shop-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
